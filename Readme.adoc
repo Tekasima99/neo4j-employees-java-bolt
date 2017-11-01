@@ -1,0 +1,50 @@
+== Neo4j Employees Example Application
+
+This is a sample application demonstrating an Employees APIs built using javaspark framework and accessing neo4j content on the backend.
+
+=== Technology Stack
+
+These are the components of sample Employee Application:
+
+* Application Type:         RESTful API
+* Web framework:            http://www.sparkjava.com/[Spark-Java] (Micro-Webframework)
+* Neo4j Database Connector: https://github.com/neo4j/neo4j-java-driver[Neo4j-Java-Driver] for Cypher http://neo4j.com/docs/developer-manual/current/#driver-manual-index[Docs]
+* Database:                 Neo4j-Server (You may your own neo4j instance OR Sandbox instance provided by neo4j)
+* Frontend:                 <coming soon>
+
+=== Employee API Endpoints:
+
+Listed below are the API endpoints for this sample application.
+
+----
+// list all employees 
+curl http://localhost:4567/employees
+
+// Add an employee
+curl -X POST -H "Content-Type: application/json" -d '{ "id":"1", "name":"Manoj Faria" }' http://localhost:4567/employees
+Hint: On Windows you may have to escape the double quotes and replace the single quotes by double quotes.
+
+// list employee using empid
+curl http://localhost:4567/employees/1
+----
+
+=== Executiion Instructions:
+
+Ensure your local neo4j instance (or sandbox neo4j instance) is running. 
+
+Change the neo4j connection info (i.e. servername, port number, userid and password) in EmployeeApp.java to match your neo4j instance.
+
+
+Build the jar file (target\Employee-0.0.1-SNAPSHOT-jar-with-dependencies.jar) using the below stated command:
+[source,shell]
+----
+mvn package
+----
+
+Start the application using:
+[source,shell]
+----
+java -jar target\Employee-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+----
+
+Go to http://localhost:4567/employees or try out any of the curl statements listed above.
