@@ -1,6 +1,6 @@
 == Neo4j Employees Example Application
 
-This is a sample application demonstrating an Employees APIs built using javaspark framework and accessing neo4j content on the backend.
+This is a sample application demonstrating Employees APIs built using javaspark framework and accessing neo4j content on the backend.
 
 === Technology Stack
 
@@ -9,7 +9,7 @@ These are the components of sample Employee Application:
 * Application Type:         RESTful API
 * Web framework:            http://www.sparkjava.com/[Spark-Java] (Micro-Webframework)
 * Neo4j Database Connector: https://github.com/neo4j/neo4j-java-driver[Neo4j-Java-Driver] for Cypher http://neo4j.com/docs/developer-manual/current/#driver-manual-index[Docs]
-* Database:                 Neo4j-Server (You may your own neo4j instance OR Sandbox instance provided by neo4j)
+* Database:                 Neo4j-Server (You may use your own neo4j instance OR Sandbox instance provided by neo4j)
 * Frontend:                 <coming soon>
 
 === Employee API Endpoints:
@@ -28,7 +28,7 @@ Hint: On Windows you may have to escape the double quotes and replace the single
 curl http://localhost:4567/employees/1
 ----
 
-=== Executiion Instructions:
+=== Execution Instructions:
 
 Ensure your local neo4j instance (or sandbox neo4j instance) is running. 
 
